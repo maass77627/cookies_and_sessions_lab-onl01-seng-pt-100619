@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
    #session[:cart_id] = @cart.id
 
   def cart
-    @cart = Cart.find(session[:cart_id])
-    if @cart.save
     session[:cart] ||= []
   end
 end
