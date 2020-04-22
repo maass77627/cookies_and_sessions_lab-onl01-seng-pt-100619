@@ -10,12 +10,14 @@ class ApplicationController < ActionController::Base
    end
 
 
-
+#session[:user_id] = @user.id
+   #session[:cart_id] = @cart.id
 
 helper_method :cart
 
   def cart
     @cart = Cart.find(session[:cart_id])
+    if @cart
     session[:cart] ||= []
   end
 
