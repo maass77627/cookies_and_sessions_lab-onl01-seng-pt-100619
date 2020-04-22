@@ -1,6 +1,6 @@
 class ProductsController < ActionController::Base
 def index
-  #session[:cart] ||= []
+  @products = Product.all
 end
 
 def add
