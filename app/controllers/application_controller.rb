@@ -16,7 +16,7 @@ helper_method :cart
 
   def cart
     @cart = Cart.find(session[:cart_id])
-session[:cart] ||= []
+    session[:cart] ||= []
   end
 
 end
